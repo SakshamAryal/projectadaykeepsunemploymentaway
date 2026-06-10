@@ -37,6 +37,41 @@ img {
   background-color: var(--primary-bg);
 }
 
+.dark-bg {
+  background-color: #333;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+  border: 1px #333 solid;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #333;
+  }
+}
+
 /* Container */
 
 .container {
@@ -124,6 +159,38 @@ img {
   }
 }
 
+/* Services */
+
+.services {
+  padding: 3rem 0rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.services-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.services h4 {
+  margin-bottom: 0.7rem;
+  font-size: 1.4rem;
+}
+
+/* Team */
+
+.team-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.team-member img {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+}
+
 /* footer */
 
 .footer {
@@ -148,11 +215,46 @@ img {
 .footer a {
   margin: 0.2rem;
 }
+
+/* Contact hero */
+
+.dark-bg .bg-primary {
+  color: #333;
+  padding: 0 1rem;
+}
+
+/* Contact */
+.contact h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  border-bottom: 1px #333 solid;
+  margin: 1rem 0;
+  width: 100%;
+  padding-bottom: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-group button {
+  width: 100%;
+}
 /* media query */
 
 @media (max-width: 768px) {
   .header .header-flex,
-  .footer .footer-flex {
+  .footer .footer-flex,
+  .services .services-flex,
+  .team .team-flex {
     flex-direction: column;
     gap: 1.5rem;
   }
